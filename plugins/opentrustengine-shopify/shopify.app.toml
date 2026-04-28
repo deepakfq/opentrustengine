@@ -1,0 +1,16 @@
+name = "OpenTrustEngine"
+client_id = "YOUR_SHOPIFY_API_KEY"
+
+[access_scopes]
+scopes = "read_orders,read_products,write_script_tags"
+
+[webhooks]
+api_version = "2024-01"
+
+[auth]
+redirect_urls = ["https://your-app-url.com/auth/callback"]
+
+[app_proxy]
+url = "https://your-app-url.com/proxy"
+subpath = "trust-score"
+prefix = "apps"

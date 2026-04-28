@@ -1,0 +1,56 @@
+{
+  "name": "@ote/tally-agent",
+  "version": "1.0.0",
+  "description": "Desktop agent that syncs Tally ERP accounting data (sales, payments, GST filings) into OpenTrustEngine.",
+  "main": "dist/electron/main.js",
+  "files": ["dist", "README.md", "LICENSE", "assets"],
+  "scripts": {
+    "build": "tsc",
+    "start": "electron .",
+    "dev": "tsc && electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "tally",
+    "tally-erp",
+    "accounting",
+    "trust",
+    "opentrustengine",
+    "electron"
+  ],
+  "license": "AGPL-3.0-or-later",
+  "homepage": "https://opentrustengine.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepakfq/opentrustengine.git",
+    "directory": "plugins/opentrustengine-tally"
+  },
+  "bugs": {
+    "url": "https://github.com/deepakfq/opentrustengine/issues"
+  },
+  "author": "Deepak Kumar Dwivedi <deepak@freaquer.com> (https://freaquer.com)",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@ote/sdk": "^1.0.0",
+    "electron-store": "^8.2.0",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@types/xml2js": "^0.4.14",
+    "electron": "^28.3.3",
+    "electron-builder": "^24.13.3",
+    "typescript": "^5.4.0"
+  },
+  "build": {
+    "appId": "com.opentrustengine.tally",
+    "productName": "OpenTrustEngine Tally Agent",
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    }
+  }
+}

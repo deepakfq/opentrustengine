@@ -1,0 +1,58 @@
+{% comment %}
+  OpenTrustEngine Trust Badge Block
+  Displays a trust score badge on the storefront
+{% endcomment %}
+
+<div id="ote-trust-badge-{{ block.id }}" class="ote-shopify-badge">
+  <script
+    src="https://cdn.opentrustengine.com/v1/trust-widget.min.js"
+    data-api-key="{{ block.settings.api_key }}"
+    data-entity-type="store"
+    data-entity-id="{{ block.settings.entity_id }}"
+    data-mode="{{ block.settings.display_mode }}"
+    data-theme="{{ block.settings.theme }}"
+    data-container="ote-trust-badge-{{ block.id }}"
+  ></script>
+</div>
+
+{% schema %}
+{
+  "name": "Trust Score Badge",
+  "target": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "api_key",
+      "label": "API Key",
+      "info": "Your OpenTrustEngine API key"
+    },
+    {
+      "type": "text",
+      "id": "entity_id",
+      "label": "Entity ID",
+      "info": "Your store's entity ID from OpenTrustEngine"
+    },
+    {
+      "type": "select",
+      "id": "display_mode",
+      "label": "Display Mode",
+      "options": [
+        { "value": "badge", "label": "Badge (compact)" },
+        { "value": "card", "label": "Card (medium)" },
+        { "value": "profile", "label": "Profile (full)" }
+      ],
+      "default": "badge"
+    },
+    {
+      "type": "select",
+      "id": "theme",
+      "label": "Theme",
+      "options": [
+        { "value": "light", "label": "Light" },
+        { "value": "dark", "label": "Dark" }
+      ],
+      "default": "light"
+    }
+  ]
+}
+{% endschema %}

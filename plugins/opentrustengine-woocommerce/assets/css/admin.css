@@ -1,0 +1,158 @@
+/**
+ * OpenTrustEngine — Admin styles.
+ *
+ * @package OpenTrustEngine
+ */
+
+/* ---------------------------------------------------------------
+   Settings page
+   --------------------------------------------------------------- */
+
+.ote-settings-wrap {
+	max-width: 800px;
+}
+
+.ote-settings-wrap h1 {
+	margin-bottom: 1em;
+}
+
+.ote-settings-wrap .form-table th {
+	width: 180px;
+}
+
+/* Current trust score card */
+.ote-current-score {
+	background: #f0f6fc;
+	border: 1px solid #c3d9ed;
+	border-radius: 6px;
+	padding: 16px 24px;
+	margin-bottom: 24px;
+	display: inline-block;
+}
+
+.ote-current-score h3 {
+	margin: 0 0 4px;
+	font-size: 13px;
+	color: #555;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.ote-score-value {
+	font-size: 42px;
+	font-weight: 700;
+	color: #1d6fa5;
+	line-height: 1;
+}
+
+.ote-score-label {
+	font-size: 16px;
+	color: #888;
+}
+
+/* Test connection */
+#ote-test-result {
+	margin-left: 12px;
+	font-weight: 500;
+}
+
+#ote-test-result.ote-success {
+	color: #00a32a;
+}
+
+#ote-test-result.ote-error {
+	color: #d63638;
+}
+
+/* ---------------------------------------------------------------
+   Orders list — trust event badges
+   --------------------------------------------------------------- */
+
+.ote-badge {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 1.6;
+	color: #fff;
+	margin: 1px 2px;
+}
+
+.ote-badge--completed {
+	background: #00a32a;
+}
+
+.ote-badge--payment {
+	background: #2271b1;
+}
+
+.ote-badge--cancelled {
+	background: #d63638;
+}
+
+.ote-badge--refund {
+	background: #dba617;
+	color: #1d2327;
+}
+
+/* ---------------------------------------------------------------
+   Order metabox
+   --------------------------------------------------------------- */
+
+.ote-metabox-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.ote-metabox-table td {
+	padding: 6px 0;
+	border-bottom: 1px solid #f0f0f0;
+	vertical-align: middle;
+}
+
+.ote-metabox-table tr:last-child td {
+	border-bottom: none;
+}
+
+.ote-status {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: 600;
+}
+
+.ote-status--sent {
+	background: #e6f4ea;
+	color: #0d652d;
+}
+
+.ote-status--pending {
+	background: #f0f0f0;
+	color: #888;
+}
+
+/* ---------------------------------------------------------------
+   Event log page
+   --------------------------------------------------------------- */
+
+.ote-event-log-wrap .wp-list-table {
+	margin-top: 12px;
+}
+
+.ote-icon--sent {
+	color: #00a32a;
+}
+
+.ote-icon--pending {
+	color: #c3c4c7;
+}
+
+.ote-event-log-wrap .tablenav.bottom {
+	margin-top: 12px;
+}
+
+.ote-event-log-wrap .tablenav-pages .button {
+	margin-right: 6px;
+}

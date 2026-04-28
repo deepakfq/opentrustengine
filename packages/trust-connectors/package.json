@@ -1,0 +1,46 @@
+{
+  "name": "@ote/connectors",
+  "version": "1.0.0",
+  "description": "Connector framework for OpenTrustEngine — normalize events from Razorpay, Cashfree, PayU, Shopify, WooCommerce, Tally, and custom sources into a single trust event schema.",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "trust",
+    "connectors",
+    "webhook",
+    "razorpay",
+    "cashfree",
+    "shopify",
+    "woocommerce",
+    "tally",
+    "opentrustengine"
+  ],
+  "license": "AGPL-3.0-or-later",
+  "homepage": "https://opentrustengine.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepakfq/opentrustengine.git",
+    "directory": "packages/trust-connectors"
+  },
+  "bugs": {
+    "url": "https://github.com/deepakfq/opentrustengine/issues"
+  },
+  "author": "Deepak Kumar Dwivedi <deepak@freaquer.com> (https://freaquer.com)",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@ote/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@ote/sdk": "^1.0.0",
+    "typescript": "^5.4.0"
+  }
+}

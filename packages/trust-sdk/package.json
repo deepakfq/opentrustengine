@@ -1,0 +1,40 @@
+{
+  "name": "@ote/sdk",
+  "version": "1.0.0",
+  "description": "Official TypeScript/JavaScript SDK for OpenTrustEngine — multi-dimensional trust scoring for commerce, workforce, and compliance.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "trust",
+    "reputation",
+    "scoring",
+    "trust-score",
+    "opentrustengine",
+    "fintech",
+    "kyc",
+    "credit"
+  ],
+  "license": "AGPL-3.0-or-later",
+  "homepage": "https://opentrustengine.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepakfq/opentrustengine.git",
+    "directory": "packages/trust-sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/deepakfq/opentrustengine/issues"
+  },
+  "author": "Deepak Kumar Dwivedi <deepak@freaquer.com> (https://freaquer.com)",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
