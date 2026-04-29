@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussions
+    url: https://github.com/deepakfq/opentrustengine/discussions
+    about: Usage questions, ideas, and general discussion.
+  - name: 🛡 Security disclosure
+    url: https://github.com/deepakfq/opentrustengine/security/advisories/new
+    about: Privately report a vulnerability via GitHub Security Advisories.
+  - name: 💼 Commercial license inquiry
+    url: mailto:deepak@freaquer.com?subject=OpenTrustEngine%20commercial%20license
+    about: For closed-source / proprietary SaaS deployments.

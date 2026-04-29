@@ -1,0 +1,256 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" font-family="-apple-system, 'Segoe UI', Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="layerSources" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1d2c4d"/><stop offset="100%" stop-color="#152139"/>
+    </linearGradient>
+    <linearGradient id="layerConn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22325b"/><stop offset="100%" stop-color="#1a2647"/>
+    </linearGradient>
+    <linearGradient id="layerEng" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f2d4f"/><stop offset="100%" stop-color="#142342"/>
+    </linearGradient>
+    <linearGradient id="layerApi" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a8a4f"/><stop offset="100%" stop-color="#0c6c3f"/>
+    </linearGradient>
+    <linearGradient id="layerCons" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0c14b"/><stop offset="100%" stop-color="#d4a017"/>
+    </linearGradient>
+    <linearGradient id="storage" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a4a72"/><stop offset="100%" stop-color="#1f2d4f"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feFlood flood-color="#0a1628" flood-opacity="0.15"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#cdd5e8"/>
+    </marker>
+    <marker id="arrowAccent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#d4a017"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="760" fill="#0a1426"/>
+
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#f8f9fc">OpenTrustEngine — System Architecture</text>
+  <text x="600" y="60" text-anchor="middle" font-size="13" font-weight="400" fill="#cdd5e8">Sources → Connectors → Engine → API → Consumers</text>
+
+  <!-- ================ LAYER 1: SOURCES ================ -->
+  <g transform="translate(0, 90)">
+    <text x="40" y="22" font-size="11" font-weight="700" fill="#cdd5e8" letter-spacing="1.5">SOURCES</text>
+    <!-- 6 dashed boxes -->
+    <g font-size="13" font-weight="600" fill="#f8f9fc">
+      <g transform="translate(40, 30)">
+        <rect width="140" height="60" rx="8" fill="url(#layerSources)" stroke="#3a4a72" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="70" y="28" text-anchor="middle">Razorpay</text>
+        <text x="70" y="46" text-anchor="middle" font-size="10" font-weight="500" fill="#cdd5e8">Payment webhooks</text>
+      </g>
+      <g transform="translate(200, 30)">
+        <rect width="140" height="60" rx="8" fill="url(#layerSources)" stroke="#3a4a72" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="70" y="28" text-anchor="middle">Cashfree</text>
+        <text x="70" y="46" text-anchor="middle" font-size="10" font-weight="500" fill="#cdd5e8">Escrow + KYC</text>
+      </g>
+      <g transform="translate(360, 30)">
+        <rect width="140" height="60" rx="8" fill="url(#layerSources)" stroke="#3a4a72" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="70" y="28" text-anchor="middle">PayU</text>
+        <text x="70" y="46" text-anchor="middle" font-size="10" font-weight="500" fill="#cdd5e8">Settlements</text>
+      </g>
+      <g transform="translate(520, 30)">
+        <rect width="140" height="60" rx="8" fill="url(#layerSources)" stroke="#3a4a72" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="70" y="28" text-anchor="middle">Shopify</text>
+        <text x="70" y="46" text-anchor="middle" font-size="10" font-weight="500" fill="#cdd5e8">Orders + reviews</text>
+      </g>
+      <g transform="translate(680, 30)">
+        <rect width="140" height="60" rx="8" fill="url(#layerSources)" stroke="#3a4a72" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="70" y="28" text-anchor="middle">WooCommerce</text>
+        <text x="70" y="46" text-anchor="middle" font-size="10" font-weight="500" fill="#cdd5e8">WordPress storefronts</text>
+      </g>
+      <g transform="translate(840, 30)">
+        <rect width="140" height="60" rx="8" fill="url(#layerSources)" stroke="#3a4a72" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="70" y="28" text-anchor="middle">Tally ERP</text>
+        <text x="70" y="46" text-anchor="middle" font-size="10" font-weight="500" fill="#cdd5e8">GST + invoices</text>
+      </g>
+      <g transform="translate(1000, 30)">
+        <rect width="160" height="60" rx="8" fill="url(#layerSources)" stroke="#3a4a72" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="80" y="28" text-anchor="middle">Custom adapter</text>
+        <text x="80" y="46" text-anchor="middle" font-size="10" font-weight="500" fill="#cdd5e8">Bring your own</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- arrows from sources to connectors -->
+  <g stroke="#5d6c8e" stroke-width="1.5" fill="none" marker-end="url(#arrow)">
+    <path d="M110 180 V215"/>
+    <path d="M270 180 V215"/>
+    <path d="M430 180 V215"/>
+    <path d="M590 180 V215"/>
+    <path d="M750 180 V215"/>
+    <path d="M910 180 V215"/>
+    <path d="M1080 180 V215"/>
+  </g>
+
+  <!-- ================ LAYER 2: CONNECTORS ================ -->
+  <g transform="translate(0, 220)">
+    <text x="40" y="22" font-size="11" font-weight="700" fill="#cdd5e8" letter-spacing="1.5">CONNECTORS · @ote/connectors</text>
+    <g transform="translate(40, 30)">
+      <rect width="1120" height="80" rx="10" fill="url(#layerConn)" stroke="#3a4a72" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="20" y="28" font-size="14" font-weight="700" fill="#f8f9fc">Connector framework</text>
+      <text x="20" y="48" font-size="11" font-weight="500" fill="#cdd5e8">Webhook verification (HMAC) · Canonical event mapping · Idempotency · Retry &amp; DLQ · Batch ingestion</text>
+      <g transform="translate(560, 16)" font-size="11" font-weight="600" fill="#cdd5e8">
+        <rect width="160" height="20" rx="10" fill="#0c1a33" stroke="#3a4a72"/>
+        <text x="80" y="14" text-anchor="middle">verify(rawBody, sig)</text>
+        <rect x="170" width="200" height="20" rx="10" fill="#0c1a33" stroke="#3a4a72"/>
+        <text x="270" y="14" text-anchor="middle">toCanonical() → TrustEvent</text>
+        <rect x="380" width="160" height="20" rx="10" fill="#0c1a33" stroke="#3a4a72"/>
+        <text x="460" y="14" text-anchor="middle">enrich() (optional)</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- arrow connectors -> engine -->
+  <g stroke="#5d6c8e" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M600 332 V370"/>
+  </g>
+  <text x="610" y="356" font-size="11" font-weight="600" fill="#cdd5e8">TrustEvent</text>
+
+  <!-- ================ LAYER 3: ENGINE ================ -->
+  <g transform="translate(0, 375)">
+    <text x="40" y="22" font-size="11" font-weight="700" fill="#cdd5e8" letter-spacing="1.5">TRUST ENGINE · NestJS</text>
+    <g transform="translate(40, 30)">
+      <rect width="800" height="180" rx="10" fill="url(#layerEng)" stroke="#0a1628" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="20" y="28" font-size="15" font-weight="700" fill="#f8f9fc">Trust Engine</text>
+      <text x="20" y="46" font-size="11" font-weight="500" fill="#cdd5e8">5-pillar Wilson + Beta + exponential decay · Anti-gaming · KYC bridge · Webhooks</text>
+
+      <!-- 4 inner cards -->
+      <g transform="translate(20, 64)" font-size="11" fill="#f8f9fc">
+        <g transform="translate(0,0)">
+          <rect width="180" height="98" rx="8" fill="#16223f" filter="url(#shadow)"/>
+          <text x="14" y="22" font-size="12" font-weight="700">Scoring math</text>
+          <text x="14" y="40" font-weight="500" fill="#cdd5e8">Wilson lower bound</text>
+          <text x="14" y="56" font-weight="500" fill="#cdd5e8">Beta-shrunk mean</text>
+          <text x="14" y="72" font-weight="500" fill="#cdd5e8">Coverage 1 − e^(−n/κ)</text>
+          <text x="14" y="88" font-weight="500" fill="#cdd5e8">5 pillars · 1200 cap</text>
+        </g>
+        <g transform="translate(190,0)">
+          <rect width="180" height="98" rx="8" fill="#16223f" filter="url(#shadow)"/>
+          <text x="14" y="22" font-size="12" font-weight="700">Anti-gaming</text>
+          <text x="14" y="40" font-weight="500" fill="#cdd5e8">Velocity caps 50/d</text>
+          <text x="14" y="56" font-weight="500" fill="#cdd5e8">Endorsement diversity</text>
+          <text x="14" y="72" font-weight="500" fill="#cdd5e8">Sybil-cluster detect</text>
+          <text x="14" y="88" font-weight="500" fill="#cdd5e8">Append-only audit</text>
+        </g>
+        <g transform="translate(380,0)">
+          <rect width="180" height="98" rx="8" fill="#16223f" filter="url(#shadow)"/>
+          <text x="14" y="22" font-size="12" font-weight="700">Modes</text>
+          <text x="14" y="40" font-weight="500" fill="#cdd5e8">Onboarding (×1.25)</text>
+          <text x="14" y="56" font-weight="500" fill="#cdd5e8">Normal</text>
+          <text x="14" y="72" font-weight="500" fill="#cdd5e8">Recovery (×0.5)</text>
+          <text x="14" y="88" font-weight="500" fill="#cdd5e8">Monthly caps</text>
+        </g>
+        <g transform="translate(570,0)">
+          <rect width="190" height="98" rx="8" fill="#16223f" filter="url(#shadow)"/>
+          <text x="14" y="22" font-size="12" font-weight="700">KYC bridge</text>
+          <text x="14" y="40" font-weight="500" fill="#cdd5e8">PAN · Aadhaar eSign</text>
+          <text x="14" y="56" font-weight="500" fill="#cdd5e8">GST verify</text>
+          <text x="14" y="72" font-weight="500" fill="#cdd5e8">Cashfree + DigiLocker</text>
+          <text x="14" y="88" font-weight="500" fill="#cdd5e8">EVIDENCE_VERIFIED</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- TrustSign branch -->
+    <g transform="translate(870, 30)">
+      <rect width="290" height="180" rx="10" fill="url(#layerCons)" stroke="#a07c0d" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="20" y="28" font-size="15" font-weight="700" fill="#f8f9fc">TrustSign</text>
+      <text x="20" y="46" font-size="11" font-weight="500" fill="#cdd5e8">Trust-bound digital signatures</text>
+      <g transform="translate(20, 60)" font-size="11" font-weight="500" fill="#f8f9fc">
+        <text y="14">• SHA-256 doc hash</text>
+        <text y="32">• Profile snapshot frozen at sign</text>
+        <text y="50">• Aadhaar eSign / DSC / DigiLocker</text>
+        <text y="68">• 14-char DRC public verify</text>
+        <text y="86">• IT Act §65B + DPDP-compliant</text>
+      </g>
+      <text x="20" y="166" font-size="10" font-weight="700" fill="#f8f9fc">verify.onetrustengine.com</text>
+    </g>
+
+    <!-- Connector arrow to TrustSign -->
+    <g stroke="#d4a017" stroke-width="2" fill="none" marker-end="url(#arrowAccent)" stroke-dasharray="6 3">
+      <path d="M840 130 H870"/>
+    </g>
+  </g>
+
+  <!-- Storage row under engine -->
+  <g transform="translate(40, 580)" font-size="11" font-weight="600" fill="#fff">
+    <g transform="translate(0,0)">
+      <rect width="180" height="40" rx="6" fill="url(#storage)"/>
+      <text x="90" y="18" text-anchor="middle">PostgreSQL · 23 tables</text>
+      <text x="90" y="32" text-anchor="middle" font-size="10" font-weight="500" opacity="0.85">trust_entities · trust_events · …</text>
+    </g>
+    <g transform="translate(190,0)">
+      <rect width="160" height="40" rx="6" fill="url(#storage)"/>
+      <text x="80" y="18" text-anchor="middle">Redis · score cache</text>
+      <text x="80" y="32" text-anchor="middle" font-size="10" font-weight="500" opacity="0.85">5 min TTL</text>
+    </g>
+    <g transform="translate(360,0)">
+      <rect width="180" height="40" rx="6" fill="url(#storage)"/>
+      <text x="90" y="18" text-anchor="middle">R2 · signed PDFs</text>
+      <text x="90" y="32" text-anchor="middle" font-size="10" font-weight="500" opacity="0.85">Long-term archive</text>
+    </g>
+    <g transform="translate(550,0)">
+      <rect width="140" height="40" rx="6" fill="url(#storage)"/>
+      <text x="70" y="18" text-anchor="middle">Audit log</text>
+      <text x="70" y="32" text-anchor="middle" font-size="10" font-weight="500" opacity="0.85">append-only</text>
+    </g>
+  </g>
+
+  <!-- arrow engine -> API -->
+  <g stroke="#5d6c8e" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M850 660 H1080 V650"/>
+  </g>
+
+  <!-- ================ LAYER 4: API ================ -->
+  <g transform="translate(900, 580)" font-size="11" font-weight="700" fill="#fff">
+    <text x="0" y="-8" font-size="11" font-weight="700" fill="#cdd5e8" letter-spacing="1.5">API SURFACE</text>
+    <g transform="translate(0,0)">
+      <rect width="260" height="32" rx="6" fill="url(#layerApi)" filter="url(#shadow)"/>
+      <text x="130" y="20" text-anchor="middle">api.opentrustengine.com (free)</text>
+    </g>
+    <g transform="translate(0,40)">
+      <rect width="260" height="32" rx="6" fill="url(#layerApi)" filter="url(#shadow)" opacity="0.85"/>
+      <text x="130" y="20" text-anchor="middle">api.onetrustengine.com (paid)</text>
+    </g>
+  </g>
+
+  <!-- ================ LAYER 5: CONSUMERS ================ -->
+  <g transform="translate(40, 690)">
+    <text x="0" y="0" font-size="11" font-weight="700" fill="#cdd5e8" letter-spacing="1.5">CONSUMERS · npm @ote/*</text>
+    <g transform="translate(0, 10)" font-size="11" font-weight="600" fill="#f8f9fc">
+      <g transform="translate(0,0)">
+        <rect width="160" height="40" rx="6" fill="url(#layerCons)" filter="url(#shadow)"/>
+        <text x="80" y="18" text-anchor="middle">@ote/sdk</text>
+        <text x="80" y="32" text-anchor="middle" font-size="10" font-weight="500" fill="#cdd5e8">TypeScript client</text>
+      </g>
+      <g transform="translate(170,0)">
+        <rect width="160" height="40" rx="6" fill="url(#layerCons)" filter="url(#shadow)"/>
+        <text x="80" y="18" text-anchor="middle">@ote/widget</text>
+        <text x="80" y="32" text-anchor="middle" font-size="10" font-weight="500" fill="#cdd5e8">Embed badge</text>
+      </g>
+      <g transform="translate(340,0)">
+        <rect width="180" height="40" rx="6" fill="url(#layerCons)" filter="url(#shadow)"/>
+        <text x="90" y="18" text-anchor="middle">OneTrust dashboard</text>
+        <text x="90" y="32" text-anchor="middle" font-size="10" font-weight="500" fill="#cdd5e8">Hosted, paid</text>
+      </g>
+      <g transform="translate(530,0)">
+        <rect width="160" height="40" rx="6" fill="url(#layerCons)" filter="url(#shadow)"/>
+        <text x="80" y="18" text-anchor="middle">Partner platforms</text>
+        <text x="80" y="32" text-anchor="middle" font-size="10" font-weight="500" fill="#cdd5e8">Lenders, GeM, etc.</text>
+      </g>
+    </g>
+  </g>
+
+</svg>

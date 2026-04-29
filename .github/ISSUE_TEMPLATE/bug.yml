@@ -1,0 +1,84 @@
+name: 🐛 Bug report
+description: Report a defect in the SDK, widget, connector framework, or hosted API.
+title: "bug: <short summary>"
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please fill in as much as you can — incomplete reports are likely to be closed.
+
+  - type: input
+    id: package
+    attributes:
+      label: Affected package
+      description: e.g. `@ote/sdk`, `@ote/widget`, `@ote/connectors`, `api.opentrustengine.com`
+      placeholder: "@ote/sdk"
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Package / API version
+      description: Output of `npm list @ote/sdk` (or API endpoint version)
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: runtime
+    attributes:
+      label: Runtime
+      options:
+        - Node.js 18.x
+        - Node.js 20.x
+        - Node.js 22.x
+        - Browser
+        - React Native
+        - Other (mention in description)
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug, including any error messages or stack traces.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: A short code snippet, or a link to a repository / StackBlitz / CodeSandbox.
+      render: ts
+      value: |
+        const ote = new OpenTrustEngine({ apiKey: '...', apiSecret: '...' });
+        // ...
+    validations:
+      required: true
+
+  - type: input
+    id: env
+    attributes:
+      label: OS / browser
+      placeholder: "macOS 14.4 / Chrome 124"
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirm
+      options:
+        - label: I have searched existing issues for duplicates.
+          required: true
+        - label: This is not a security issue (those go to `security@opentrustengine.com`, see SECURITY.md).
+          required: true

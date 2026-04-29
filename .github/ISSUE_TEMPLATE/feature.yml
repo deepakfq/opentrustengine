@@ -1,0 +1,54 @@
+name: ✨ Feature request
+description: Suggest a new connector, scoring signal, SDK method, or product capability.
+title: "feat: <short summary>"
+labels: ["enhancement", "triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What real-world problem does this solve? Who is asking for it?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed solution
+      description: Describe the API surface, data shape, or behaviour you have in mind.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Anything you tried, or other approaches that didn't fit.
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      multiple: true
+      options:
+        - "@ote/sdk"
+        - "@ote/widget"
+        - "@ote/connectors"
+        - Hosted API
+        - Scoring algorithm
+        - TrustSign
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: willingness
+    attributes:
+      label: Are you willing to contribute?
+      options:
+        - I'd like to write the PR
+        - I can help test
+        - Just suggesting
+    validations:
+      required: true
